@@ -1,156 +1,199 @@
-/* 
-    ---------------------------------------------------------------
-    Add your name to this file below:
-    NAME: 
-    ---------------------------------------------------------------
-*/
+/* =================================================================== */
+/* Add your name to this file below:
+   Mohammed Raiyaan Shakir
+/* =================================================================== */
 
-
-/* Remember, the root element is where you can declare CSS variables */
+/* Root variables: colors & font stacks */
 :root{
-    /* Theme colors in CSS variables */
+	/* Theme colors */
 	--lime: #41c84c;
 	--mint: #9ee3a4;
 	--teal: #41c8b1;
 	--tiffany: #9ee3d7;
 	--plum: #6e2275;
 	--amethyst: #bc41c8;
-
-    /* text and background colors */
-    --white: #fff;
-    --lt-gray: #eaeaea;
-    --med-gray: #555;
-    --dk-gray: #222;
-
-    /* Font Stacks */
-    /* add the two font stacks here */
-}
-
-body{
-	/* set the font family to Lato, Arial, sans-serif (--body-fonts) */
-	/* Set the line height to 1.5 */
-	/* set the font size to 1.1rem	*/
-	/* set the font color to #222 (--dk-gray) */
+  
+	/* text & backgrounds */
+	--white: #fff;
+	--lt-gray: #eaeaea;
+	--med-gray: #555;
+	--dk-gray: #222;
+  
+	/* Font stacks */
+	--display-font: "Seymour One", sans-serif;
+	--body-fonts: "Lato", Arial, sans-serif;
+  }
+  
+  /* Reset and base */
+  *,
+  *::before,
+  *::after {
+	box-sizing: border-box;
+  }
+  
+  html, body {
 	margin: 0;
 	padding: 0;
-}
-
-header{
-	padding: 1rem;
+  }
+  
+  body{
+	font-family: var(--body-fonts);
+	font-size: 1.1rem;          /* ~17.6px */
+	line-height: 1.5;
+	color: var(--dk-gray);
+	background: var(--white);
+  }
+  
+  /* Header */
+  header{
+	padding: 2.25rem 1rem 1.5rem;
 	background-color: var(--plum);
 	color: var(--white);
 	border-bottom: 8px solid var(--teal);
-}
-
-h1, h2, h3{
-	/* center align the text */
-	/* use a web font here (instructions on page) */
-	/* make the heading text all small caps style */
-}
-
-h2{
-	margin: 0;
-	padding: 4px;
-	text-decoration: dotted underline var(--teal) 4px;
-}
-
-h3{
-	margin: 0;
-	padding: 4px;
-	/* add an underline like the one on the h2s to the h3s, but make it solid and mint color */
-}
-
-nav{
-	margin: 0 auto;
-	padding: 0.5rem 0;
-}
-
-nav ul{
-	list-style-type: none;
-	padding-left: 0;
-}
-
-nav a{
-	/* make these display as block level elements */
-	margin: 1rem auto;
-	padding: 1rem;
-	background-color: var(--tiffany);
-	/* set the font color to #222 (--dk-gray) */
-	/* center align the text */
-	/* remove the underline */
-	/* make the font's size 1.2rem */
-	/* make the font bolder (600) */
-}
-
-nav a:hover{
-    color: var(--dk-gray);
-	background-color: var(--teal);
-}
-
-main{
-	padding: 2rem 1rem;
-}
-
-section{
-	padding: 1rem;
-}
-
-#fonts, #text{
-	border-bottom: 4px solid var(--plum);
-}
-
-p{
-	/* set a max-width of 55 characters */
-	/* add an indent on the first line of 2rem */
-	/* center those paragraphs (not the text) on the page */
-	padding: 0.5rem;
-}
-
-a{
-    color: var(--plum);
-}
-
-a:hover{
-    color: var(--lime);
-}
-
-dl, ol, main ul{
-	/* limit the width of these lists to 55 characters */
-	margin: 1rem auto;
-}
-
-dt{
-	/* make this font display in bold weight */
-}
-
-dt::before{
-	color: var(--amethyst);
-	content: "\2605";
-	padding-right: 4px;
-}
-
-footer{
-	padding: 1rem;
-	background-color: var(--plum);
-	color: var(--white);
 	text-align: center;
-	border-top: 8px solid var(--teal);
-}
-
-
-/* 
-    THIS CODE IS A MEDIA QUERY, USED TO ADD STYLES BASED ON HOW WIDE THE SCREEN IS. IT IS PART OF WHAT IS MAKING THE SITE RESPONSIVE
-
-    LEARN MORE ABOUT RESPONSIVE DEVELOPMENT IN GIT414
-*/
-@media screen and (min-width: 450px){
-	nav{
-		width: fit-content;
-	}
-		
-	nav ul{
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 0.5rem;
-	}
-}
+  }
+  
+  h1{
+	margin: 0 0 1.25rem;
+	font-family: var(--display-font);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: clamp(1.8rem, 3.2vw + 1rem, 3.2rem);
+	line-height: 1.1;
+	text-shadow: 0 2px 0 rgba(0,0,0,.15);
+  }
+  
+  /* Top nav "buttons" */
+  nav ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: .75rem;
+	justify-content: center;
+  }
+  
+  nav a{
+	display: inline-block;
+	padding: .7rem 1.1rem;
+	background: var(--mint);
+	color: var(--dk-gray);
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: .5rem;
+	box-shadow: 0 2px 0 rgba(0,0,0,.1);
+	transition: transform .08s ease, background .15s ease;
+  }
+  
+  nav a:hover,
+  nav a:focus{
+	background: var(--tiffany);
+	transform: translateY(-1px);
+  }
+  
+  /* Main layout: readable text width */
+  main{
+	padding: 2rem 1rem 3rem;
+  }
+  
+  .section{
+	max-width: 70ch;             /* readable width */
+	margin: 0 auto 3rem;
+  }
+  
+  h2, h3{
+	font-family: var(--display-font);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--dk-gray);
+	text-align: center;
+	margin: 0 0 1rem;
+  }
+  
+  h2{
+	font-size: clamp(1.25rem, 1.25vw + 1rem, 2rem);
+	text-decoration: underline;
+	text-decoration-thickness: .15rem;
+	text-underline-offset: .35rem;
+  }
+  
+  h3{
+	font-size: clamp(1.05rem, .9vw + .75rem, 1.45rem);
+	margin-top: 2rem;
+  }
+  
+  p, ul, ol, dl {
+	margin: 0 0 1.1rem;
+  }
+  
+  ul, ol {
+	padding-left: 1.25rem;
+  }
+  
+  a{
+	color: var(--teal);
+  }
+  
+  a:hover, a:focus{
+	text-decoration: underline;
+  }
+  
+  /* Definition list with purple stars */
+  .defs{
+	margin-left: 0;
+	padding-left: 0;
+  }
+  
+  .defs dt{
+	font-weight: 700;
+	position: relative;
+	padding-left: 1.4rem;
+	margin: 1rem 0 .2rem;
+  }
+  
+  .defs dt::before{
+	content: "★";
+	color: var(--amethyst);
+	position: absolute;
+	left: 0;
+	top: 0;
+  }
+  
+  .defs dd{
+	margin: 0 0 .6rem 1.4rem;
+  }
+  
+  /* Inline code style */
+  code{
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	background: var(--lt-gray);
+	padding: .08rem .35rem;
+	border-radius: .3rem;
+	font-size: .95em;
+  }
+  
+  /* Purple separator line above Text Properties */
+  #text {
+	border-top: 5px solid var(--plum);
+	padding-top: 2rem;
+	margin-top: 3rem;
+  }
+  
+  /* Footer */
+  footer{
+	background: var(--plum);
+	color: var(--white);
+	padding: 1.25rem 1rem 2rem;
+	text-align: center;
+	border-top: 4px solid rgba(0,0,0,.08);
+  }
+  
+  footer p{
+	margin: .2rem 0;
+  }
+  
+  footer .smallprint{
+	opacity: .9;
+	font-size: .95rem;
+  }
+  

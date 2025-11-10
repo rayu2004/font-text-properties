@@ -1,113 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Font and Text Properties in CSS</title>
+<head>
+  <meta charset="utf-8" />
+  <title>Font and Text Properties in CSS</title>
 
-        <!-- TO DO: Add your name to the meta author tag -->
-        <meta name="author" content="">
-        <meta name="description" content="Practice with font and text properties used in CSS">
+  <!-- author -->
+  <meta name="author" content="Mohammed Raiyaan Shakir" />
+  <meta name="description" content="Practice with font and text properties used in CSS" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- This meta tag is included because this site is responsive -->
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Fonts: Seymour One (400) & Lato (400,700) -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Seymour+One&display=swap" rel="stylesheet">
 
-        <!-- FONT IMPORTS -->
-        <!-- TO DO -->
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Font/Text Properties in CSS</h1>
+    <nav aria-label="section links">
+      <ul>
+        <li><a href="#fonts">Font Properties</a></li>
+        <li><a href="#text">Text Properties</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <!-- ===================== FONTS ===================== -->
+    <section id="fonts" class="section">
+      <h2>Font Properties</h2>
+      <p>
+       Although some of the properties sound similar to text properties, think of font
+        properties as those that change the style of the font on the page its family,
+        size, weight, and related characteristics.
+      </p>
 
-        <!-- LINK TO STYLESHEET -->
-        <!-- TO DO -->
-    </head>
+      <section class="subsection">
+        <h3>Font Properties Covered in Your zyBook</h3>
+        <dl class="defs">
+          <dt>font-family</dt>
+          <dd>
+            Define the fonts you want to use. List more than one, and keep them
+            visually similar so if one fails, the next is a good fallback.
+          </dd>
 
-    <body>
-        <header>
-            <h1>Font/Text Properties &amp; Positioning</h1>
-            <nav>
-                <ul>
-                    <li><a href="#fonts">Font Properties</a></li>
-                    <li><a href="#text">Text Properties</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section id="fonts">
-                <h2>Font Properties</h2>
-                <p>Although some of the properties sounds similar to text properties, think of font properties as those that will change the style of the font on the page. Its size, the family, etc.</p>
-                <section>
-                    <h3>Font Properties Covered in Your zyBook</h3>
-                    <dl>
-                        <dt>font-family</dt>
-                        <dd>This is where you'll define the fonts you want to use. There should be more than one in this list, and they should look similar to each other, so that if one doesn't load, another one in the list will.</dd>
-                        
-                        <dt>font-size</dt>
-                        <dd>Allows you to control the size of the text on your page. The browser does apply some defaults, so you should notice right away which elements on a page are headings and paragraphs (even though we don't choose tags for style).</dd>
-                        
-                        <dt>font-weight</dt>
-                        <dd>You can use this property to make your fonts bolder or lighter. Usually headings are more bold and text is at a normal or medium weight. Don't make your text so light or small that no one can read it!</dd>
-                        
-                        <dt>font-style</dt>
-                        <dd>Can be used to make fonts bold, underlined, italic, etc.</dd>
-                        
-                        <dt>font-variant</dt>
-                        <dd>This property specifies the variant of the font, which can be set to things like small caps and uppercase.</dd>
-                        
-                        <dt>font</dt>
-                        <dd>This is a shorthand property that you can use to set (in this order) a font's: style, variant, weight, size/(optional) line-height, and family all at once.</dd>
-                    </dl>
-                </section>
-                <section>
-                    <h3>Using Web Fonts</h3>
-                    <p>There are a lot of ways to use fonts on the web. You can host your own files, or you can link to fonts hosted by a service like <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>. Let's grab a font to use on our page for our headings. (Often, the heading font is different than the one used for the body text).</p>
-                    <p>In Chrome, <a href="https://fonts.google.com/specimen/Seymour+One?thickness=10" target="_blank">go to the font "Seymour One" on Google Fonts</a>. We're going to add this to the page. Follow the steps below to use a Google Font:</p>
-                    <ol>
-                        <li>Choose the font you'd like to use on your site from those shown on Google Fonts, then click on the name to go to the page showing all of its styles/weights.</li>
-                        <li>From that page, add the style you need by clicking on the plus sign next to them. (Just choose the ones you need, the more you add, the slower your page will load).</li>
-                        <li>Once all of your font styles are selected and visible in the side panel, copy the link code from the sidebar, and paste it in the head of your HTML document before your link to your CSS file.</li>
-                        <li>To use the font in your CSS, copy the font-family rule at the bottom of the sidebar and paste it into the parts of your CSS where you want to use that font. Be sure to adjust for weights if necessary.</li>
-                    </ol>
-                </section>
-                <section>
-                    <h3>Font Sizing</h3>
-                    <p>There are a lot of units you can use to set sizes for all of the elements on your page, and that incudes fonts. However, there are some important things to keep in mind.</p>
-                    <ol>
-                        <li>Use relative units. If you use pixels, you can take away the user's ability to zoom into the text or make it larger with their device settings.</li>
-                        <li>Make sure that your body text is at least 1rem (which is about 16 pixels). This is a minimum font size for readability/accessibility.</li>
-                    </ol>
-                </section>
-            </section>
-            <section id="text">
-                <h2>Text Properties</h2>
-                <p>Text properties do have some settings that sound similar to font properties, but think of these as those that would do more to change the way the text layout looks on the page.</p>
-                <section>
-                    <h3>Text Properties Covered in Your zyBook</h3>
-                    <dl>
-                        <dt>text-align</dt>
-                        <dd>This controls how the text is aligned inside of its container. Options are: left, right, center, and justified.</dd>
-                        
-                        <dt>text-decoration</dt>
-                        <dd>This is a shorthand that controls the color, thickness, style, and kind of line used with your text.</dd>
-                        
-                        <dt>text-transform</dt>
-                        <dd>You can use this property to convert your text to all upper- or lower-case letters, in addition to other settings.</dd>
-                        
-                        <dt>text-indent</dt>
-                        <dd>Text indent will indent the first line of your paragraph(s). This can make it easier to scan to find a new paragraph, but you can also use spacing for this.</dd>
-                    </dl>
-                </section>
-                <section>
-                    <h3>Line Height and Width for Text - Best Practices</h3>
-                    <p>These two properties are important for readability and accessibility (which means that they're also important for SEO!), so be sure to follow the guidelines below.</p>
-                    <ul>
-                        <li>Line height should be set to more than 1, 1.5 is a common setting.</li>
-                        <li>Limiting how wide a paragraph of text is allowed to get on a screen makes it much easier to read (and looks a lot better too!). Limit your text widths to 45-90 characters (that's a bog range, generally I aim for 55-65).</li>
-                        <li>Use the <code>ch</code> unit for setting a max width on text. We generally want to limit the number of characters anyway, and this makes it easy to improve readability!</li>
-                    </ul>
-                </section>
-            </section>
-        </main>
-        <footer>
-            <p>Copyright &copy; 2023 - GIT215 - Prof. Barnett</p>
-            <p>For educational purposes only</p>
-        </footer>
-    </body>
+          <dt>font-size</dt>
+          <dd>
+            Controls the size of text on your page. Browsers apply defaults, so you’ll
+            notice right away which elements are larger (headings) or smaller (paragraphs).
+          </dd>
+
+          <dt>font-weight</dt>
+          <dd>
+            Makes fonts bolder or lighter. Headings are usually bold; body text is
+            normally regular/medium. Avoid text that’s so light or so small it’s unreadable.
+          </dd>
+
+          <dt>font-style</dt>
+          <dd>
+            Used for italic, oblique, or normal styling.
+          </dd>
+
+          <dt>font-variant</dt>
+          <dd>
+            Specifies variants of the font such as small-caps or all-uppercase presentation.
+          </dd>
+
+          <dt>font (shorthand)</dt>
+          <dd>
+            Shorthand that sets (in this order) <code>style</code>, <code>variant</code>,
+            <code>weight</code>, <code>size</code> (and optional <code>line-height</code>),
+            and <code>family</code> in one declaration.
+          </dd>
+        </dl>
+      </section>
+
+      <section class="subsection">
+        <h3>Using Web Fonts</h3>
+        <p>
+          There are many ways to use fonts on the web: you can host your own or link to a
+          service like <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a>.
+          We’ll use <strong>Seymour One</strong> for headings and <strong>Lato</strong> for body text.
+          In Chrome, go to the font
+          <a href="https://fonts.google.com/specimen/Seymour+One" target="_blank" rel="noopener">“Seymour One”</a>
+          on Google Fonts.
+        </p>
+        <ol>
+          <li>Choose the fonts and styles (Seymour One 400; Lato 400 and 700) and add them to the selection.</li>
+          <li>Copy the generated &lt;link&gt; element from the sidebar.</li>
+          <li>Paste that link into the <code>&lt;head&gt;</code> of your HTML above your CSS link.</li>
+          <li>In your CSS, set your font stacks with <code>font-family</code> where needed.</li>
+        </ol>
+      </section>
+
+      <section class="subsection">
+        <h3>Font Sizing</h3>
+        <p>
+          There are many units you can use for sizing. Keep these accessibility notes in mind:
+        </p>
+        <ol>
+          <li>Prefer relative units (rem/em). Fixed pixels can harm zoom and device adaptability.</li>
+          <li>Make sure body text is at least <code>1rem</code> (about 16px) for readability.</li>
+        </ol>
+      </section>
+    </section>
+
+    <!-- ===================== TEXT ===================== -->
+    <section id="text" class="section">
+      <h2>Text Properties</h2>
+      <p>
+        Text properties change the way the <em>layout</em> of text appears—alignment,
+        decoration, casing, indentation, and spacing for comfortable reading.
+      </p>
+
+      <section class="subsection">
+        <h3>Text Properties Covered in Your zyBook</h3>
+        <dl class="defs">
+          <dt>text-align</dt>
+          <dd>Controls text alignment: left, right, center, or justify.</dd>
+
+          <dt>text-decoration</dt>
+          <dd>Shorthand controlling decoration line, style, and color (e.g., underlines on links).</dd>
+
+          <dt>text-transform</dt>
+          <dd>Converts text to uppercase, lowercase, or capitalized forms.</dd>
+
+          <dt>text-indent</dt>
+          <dd>
+            Indents the first line of a paragraph; helpful for scanning new paragraphs when
+            you’re not adding extra spacing.
+          </dd>
+        </dl>
+      </section>
+
+      <section class="subsection">
+        <h3>Line Height and Width for Text – Best Practices</h3>
+        <p>
+          These properties are important for readability and accessibility (and therefore SEO).
+          Follow the guidelines below:
+        </p>
+        <ul>
+          <li>Use a line-height greater than 1; <strong>1.5</strong> is a common setting.</li>
+          <li>Limit paragraph width to about <strong>45–90 characters</strong> (aim ~55–65).</li>
+          <li>
+            Use the <code>ch</code> unit to constrain line length. It naturally relates to the number of
+            characters, improving readability!
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © 2023 · GIT215 · Prof. Barnett</p>
+    <p class="smallprint">For educational purposes only</p>
+  </footer>
+</body>
 </html>
+
